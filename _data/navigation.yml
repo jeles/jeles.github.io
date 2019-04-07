@@ -2,10 +2,8 @@
 main:
   - title: "About"
     url: /#About
-  - title: "Data Science Projects"
+  - title: "Data Science Blog"
     url: /DataScience/
-  - title: "Neural Engineering"
-    url: /NeuralEngineering/
 # - title: "CV"
 #   url: /CV/
   # - title: "About"

@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "air" #"default", "aqua", "contrast", "dark", "dirt",
 
 # Site Settings
 locale                   : "en-US"
-title                    : "James Eles, PhD"
+title                    : "The Tie-In: finding connections in the natural world"
 title_separator          : "|"
 name                     : "James Eles"
-description              : "The official site for James Eles."
+description              : "Data science and neural engineering blog"
 url                      : "http://jameseles.com" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "jeles/jeles.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -106,9 +106,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "James Eles"
+  name             : "James Eles, PhD"
   avatar           : "/assets/images/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Neural engineer interested in data science, innovation, and cool stuff"
+  bio              : "Data enthusist and neural engineering post-doc at University of Ptitsburgh"
   location         : "Pittsburgh, PA"
   email            :
   links:
