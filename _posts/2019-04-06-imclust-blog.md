@@ -13,7 +13,7 @@ excerpt: "We explore some brain imaging data and use Python and scikit-learn Kme
 ## an image-processing tutorial for calcium imaging
 <br />
 
-Electrodes are devices that can be implanted in brain or nerve tissue to control **brain-computer interfaces**--ie, devices that let people control computers or robotic limbs with thought. While this technology has already started to be translated for clinical use, there are still some elements that need to be optimized. Namely, implanted an electrode into the brain is very traumatic and can damage neurons and create an inflammatory response that can affect the permance of the device.
+Electrodes are devices that can be implanted in brain or nerve tissue to control **brain-computer interfaces**--devices that let people control computers or robotic limbs with thought. While this technology has already started to be translated for clinical use, there are still some elements that need to be optimized. Namely, implanting an electrode into the brain is very traumatic and can damage brain cells leading to decreased performance of the device.
 
 In this tutorial, we look at how these implanted devices change neural activity. This work is largely inspired by work of [Dr. Alberto Vazquez](https://www.engineering.pitt.edu/People/Faculty/Profiles/Alberto-Vazquez/) at University of Pittsburgh.
 
@@ -50,7 +50,7 @@ from sklearn.cluster import KMeans
 <br />
 
 ## Step 2: Load the imaging data and show an image of the mean fluorescence over time
-Note: our imaging data is collected with a CCD camera at a 20 frames per second. This way, we can visualize rapid changes in a transgenically expressed calcium sensor. I won't go into the biology here, but you can follow this [link](https://www.nature.com/articles/nature12354) for more!
+Data collected in this project are videos of brain activity collected with a CCD camera at a 20 frames per second. This way, we can visualize rapid changes in a transgenically expressed calcium sensor. I won't go into the biology of the sensor here, but you can follow this [link](https://www.nature.com/articles/nature12354) for more!
 
 <br />
 
