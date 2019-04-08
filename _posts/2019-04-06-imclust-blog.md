@@ -1,6 +1,6 @@
 ---
 layout: single
-title:  "Exploring changing brain connectivty with Python"
+title:  "Unsupervised mapping of brain regions with Python"
 type: post
 comments: true
 date:   2019-04-06
@@ -10,7 +10,7 @@ header:
 excerpt: "We explore some brain imaging data and use Python and scikit-learn Kmeans clustering to illustrate how brain regions change after a brain-computer interface electrode implantation"
 ---
 
-## an image-processing tutorial for calcium imaging
+## an image-processing flow for calcium imaging
 <br />
 
 Electrodes are devices that can be implanted in brain or nerve tissue to control **brain-computer interfaces**--devices that let people control computers or robotic limbs with thought. While this technology has already started to be translated for clinical use, there are still some elements that need to be optimized. Namely, implanting an electrode into the brain is very traumatic and can damage brain cells leading to decreased performance of the device.
