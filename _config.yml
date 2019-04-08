@@ -12,11 +12,11 @@
 
 theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "air" #"default", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "contrast" #"default", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "The Tie-In: finding connections in the natural world"
+title                    : "The Pothole: Insights beneath the Surface"
 title_separator          : "|"
 name                     : "James Eles"
 description              : "Data science and neural engineering blog"

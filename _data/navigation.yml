@@ -1,7 +1,5 @@
 # main links
 main:
-  - title: "About"
-    url: /#About
   - title: "Data Science Blog"
     url: /DataScience/
 # - title: "CV"
