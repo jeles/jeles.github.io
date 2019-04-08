@@ -1,13 +1,13 @@
 ---
 layout: single
-title:  "Unsupervised mapping of brain regions with Python"
+title:  "Unsupervised brain mapping with Python"
 type: post
 comments: true
 date:   2019-04-06
 header:
   teaser: "assets/images/thumbnail/2019-04-06_thumb.png"
 
-excerpt: "We explore some brain imaging data and use Python and scikit-learn Kmeans clustering to illustrate how brain regions change after a brain-computer interface electrode implantation"
+excerpt: "Exploration of brain imaging data with Python and kmeans clustering to show how brain regions change after a electrode implantation"
 ---
 
 ## an image-processing flow for calcium imaging
