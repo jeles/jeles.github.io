@@ -7,7 +7,7 @@ date:   2019-04-06
 header:
   teaser: "assets/images/thumbnail/2019-04-06_thumb.png"
 
-excerpt: "Exploration of brain imaging data with Python and kmeans clustering to show how brain regions change after a electrode implantation"
+excerpt: "Exploration of brain imaging data with Python and kmeans clustering to show how brain regions change after electrode implantation"
 ---
 
 ## an image-processing flow for calcium imaging
