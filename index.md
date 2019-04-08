@@ -8,9 +8,12 @@ share: false
 classes: narrow
 
 header:
-  overlay_color: "#000"
-  overlay_filter: "0.2"
-  overlay_image: /assets/images/bannersmall.png
+  #overlay_color: "#000"
+  #overlay_filter: "0.2"
+  #overlay_image: /assets/images/banner.png
+  image: /assets/images/bannertrunc.png
+  title: ''
+  type: "center"
 
 excerpt: " <br /> <br /> "
 ---
