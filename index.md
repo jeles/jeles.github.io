@@ -1,5 +1,5 @@
 ---
-title: "<br /> "
+title: "<br /> <br /> <br /> <br /> "
 layout: splash
 permalink: /
 author_profile: false
@@ -10,9 +10,9 @@ classes: narrow
 header:
   overlay_color: "#000"
   overlay_filter: "0.2"
-  overlay_image: /assets/images/banner_splashb.png
+  overlay_image: /assets/images/banner.png
 
-excerpt: " <br /> "
+excerpt: " <br /> <br /> "
 ---
 <a name="about"></a>
 
