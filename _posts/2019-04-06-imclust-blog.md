@@ -9,7 +9,6 @@ header:
 
 excerpt: "Exploration of brain imaging data with Python and kmeans clustering to show how brain regions change after electrode implantation"
 ---
-
 ## an image-processing flow for calcium imaging
 <br />
 
@@ -124,7 +123,7 @@ plt.show()
 <br />
 <br />
 
-# Step 3: Now let's see how the change in fluorescence signal of each XY location correlates with all other XY locations
+## Step 3: Now let's see how the change in fluorescence signal of each XY location correlates with all other XY locations
 
 We'll simply rearrange this 3D image to a 2D image, and determine the Pearson's correlation coefficient between all XY pixels
 
@@ -145,7 +144,7 @@ corrmap = np.corrcoef(cform)
 
 
 <br />
-For our 2 sample points that we look at previously, let's generate heatmaps that show the Pearson's coefficient between our sample points and all other points on the image. Warmer colors will be more correlated, cooler colors will be more anti-correlated.
+For our 2 sample points that we looked at previously, let's generate heatmaps that show the Pearson's coefficient between our sample points and all other points on the image. Warmer colors will be more correlated, cooler colors will be more anti-correlated.
 <br />
 
 
