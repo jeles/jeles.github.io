@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "contrast" #"default", "aqua", "contrast", "dark", "d
 
 # Site Settings
 locale                   : "en-US"
-title                    : "The Pothole: Insights beneath the Surface"
+title                    : "The Oxbow: Insights beneath the Surface"
 title_separator          : "|"
 name                     : "James Eles"
 description              : "Data science and neural engineering blog"

@@ -10,7 +10,7 @@ header:
 excerpt: "Simple visualization of Pittsburgh's potholes from 311 reports"
 ---
 
-In the spirit of this blog's namesake, I've decided to spend some time looking into potholes. I'm from Pittsburgh, PA, and like most northeastern city our roads take a beating each winter. In Pittsburgh, we have a non-emergency reporting service (311) where we can call in can let the city know that there's a hole in the road. Thanks to the [Western Pennsyvlania Regional Data Center](http://www.wprdc.org/), anyone can access the 311 data and see where the potholes are! In this post, I'll just do a simple visualization to create a map of Pittsburgh entirely by its potholes. In future posts, I'll delve much more into what determines how long it takes before potholes get filled.
+If you're from a place that has harsh winters, you know about the horrors of potholes. In Pittsburgh, we have a non-emergency reporting service (311) where we can call in can let the city know that there's a hole in the road. Thanks to the [Western Pennsyvlania Regional Data Center](http://www.wprdc.org/), anyone can access the 311 data and see where the potholes are! In this post, I'll just do a simple visualization to create a map of Pittsburgh entirely by its potholes. In future posts, I'll delve much more into what determines how long it takes before potholes get filled.
 
 <br />
 
