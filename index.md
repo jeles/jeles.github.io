@@ -23,3 +23,15 @@ excerpt: " <br /> <br /> "
 <br />
 <br />
 The brain is 3 pounds of fat and salt water. It's the structure of the organ that makes us people. Similarly, most data collected in the world is just unloved server space. My goal is to make The Pothole a place where data can come alive and maybe help people out.
+
+
+Check out the [blog](http://jameseles.com/DataScience/) for the full post archive. Here's my most recent posts:
+<br />
+<br />
+
+
+<div class="grid__wrapper">
+  {% for post in site.posts limit:4 %}
+    {% include archive-single.html type="grid" %}
+  {% endfor %}
+</div>
