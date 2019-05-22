@@ -16,13 +16,12 @@ Despite innovations in automotive safety features and traffic control systems, a
 
 For early validation of this model, I have decided to use data from my home city of Pittsburgh, Pennsylvania. The [Western Pennsylvania Regional Data Center](https://data.wprdc.org/dataset/allegheny-county-crash-data) has published information about accidents that have occurred within the city from 2004-2017. From these data, we can see that in Pittsburgh, roughly 43% of accidents occur at traffic intersections, and that the number of accidents occurring at intersections has gone up over that period:
 
+#### Figure 1: Intersection Accident Rate is Increasing
 ![png]({{ "/assets/images/2019-05-21_f1.png" }})
 
 
-<br />
-
 Using this data as well as published descriptors of the intersections (totaling **303MB of data processed**), I have created a preliminary Ridge Regression model to predict the number of accidents that have occurred at each intersection in Pittsburgh from 2004-2017. To generate the model, I first used geospatial data of street centerlines to define all intersections in Pittsburgh. This is shown below, with each intersection also showing how many accidents have occurred there from 2004-2017:
-
+#### Figure 2: Intersection Definition from Geospatial Data
 ![png]({{ "/assets/images/2019-05-21_f2.png" }})
 
 ### Import Libraries and Engineering Features
@@ -61,7 +60,7 @@ newdf.head()
 
 
 
-
+#### Table 1: Features Header
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -194,7 +193,7 @@ newdf.head()
 <br />
 The Pearson's correlation coefficient matrix of these features shows that many of the features--especially presence of a traffic light at the intersection and the number of signs at the intersection--are correlated with the total number of accidents (numacc):
 
-**Pearson's Correlation Coefficient with Number of Accidents at each Intersection:**
+#### Table 2: Pearson's Correlation Coefficient with Accident Rate
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -275,6 +274,8 @@ The Pearson's correlation coefficient matrix of these features shows that many o
 
 <br />
 In addition to these features, some of the categorical features that I have extracted seem to be predictive of the number of collisions. For instance, Zip Code seems to capture some variance in the data, as shown by this map:
+
+#### Figure 3: Accident Rate Varies by Zip Code
 ![png]({{ "/assets/images/2019-05-21_f4.png" }})
 
 <br />
