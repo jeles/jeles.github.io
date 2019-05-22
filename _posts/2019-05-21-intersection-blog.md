@@ -214,7 +214,7 @@ The Pearson's correlation coefficient matrix of these features shows that many o
     <tr style="text-align: right;">
       <th></th>
       <th>Variables</th>
-      <th>Rsq</th>
+      <th>R</th>
     </tr>
   </thead>
   <tbody>
