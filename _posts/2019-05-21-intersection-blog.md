@@ -194,30 +194,83 @@ newdf.head()
 <br />
 The Pearson's correlation coefficient matrix of these features shows that many of the features--especially presence of a traffic light at the intersection and the number of signs at the intersection--are correlated with the total number of accidents (numacc):
 
+**Pearson's Correlation Coefficient with Number of Accidents at each Intersection:**
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-```python
-print(newdf[newdf.columns[0:]].corr()['numacc'])
-corrmat = newdf.corr()
-f, ax = plt.subplots(figsize=(12, 9))
-sns.heatmap(corrmat, cmap='coolwarm', vmax=1, square=True);
-```
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-    numones         0.211491
-    meanspeed       0.244793
-    maxdiffspeed    0.156348
-    numroad         0.266065
-    uniroad         0.219210
-    StopSign       -0.038679
-    StopPerWay      0.015820
-    TrafficLight    0.523356
-    TrafficFlash   -0.144408
-    numRelSigns     0.302261
-    numacc          1.000000
-    Name: numacc, dtype: float64
-
-
-
-![png]({{ "/assets/images/2019-05-21_f3.png" }})
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Variables</th>
+      <th>Rsq</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>7</th>
+      <td>Traffic Lights</td>
+      <td>0.523356</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>No. Relevant Signs</td>
+      <td>0.302261</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>No. of Roads at Int.</td>
+      <td>0.266065</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Mean Speed of Roads</td>
+      <td>0.244793</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>No. Unique Roads at Int.</td>
+      <td>0.219210</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>No. of One Ways</td>
+      <td>0.211491</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Largest Speed Differential</td>
+      <td>0.156348</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>No. Stop Signs per Way</td>
+      <td>0.015820</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Stop Signs</td>
+      <td>-0.038679</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Flashing Traffic Light</td>
+      <td>-0.144408</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 
 <br />
