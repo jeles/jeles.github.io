@@ -108,7 +108,7 @@ analytics:
 author:
   name             : "James Eles, PhD"
   avatar           : "/assets/images/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Data enthusist and neural engineering post-doc at University of Pittsburgh"
+  bio              : "Data enthusiast and neural engineering post-doc at University of Pittsburgh"
   location         : "Pittsburgh, PA"
   email            :
   links:

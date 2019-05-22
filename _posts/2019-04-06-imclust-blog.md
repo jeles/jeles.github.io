@@ -10,6 +10,7 @@ header:
 excerpt: "Exploration of brain imaging data with Python and kmeans clustering to show how brain regions change after electrode implantation"
 ---
 ## an image-processing flow for calcium imaging
+
 <br />
 
 Electrodes are devices that can be implanted in brain or nerve tissue to control **brain-computer interfaces**--devices that let people control computers or robotic limbs with thought. While this technology has already started to be translated for clinical use, there are still some elements that need to be optimized. Namely, implanting an electrode into the brain is very traumatic and can damage brain cells leading to decreased performance of the device.
