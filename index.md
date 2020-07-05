@@ -19,7 +19,10 @@ excerpt: " <br /> <br /> "
 ---
 <a name="about"></a>
 
-**Welcome to jameseles.com!**--I'm an NLP-focused data scientist and former neural engineer working on federal contracting problems. This [blog](http://jameseles.com/DataScience/) is a place to explore interesting data science problems out in the world. Enjoy!
+**Welcome to jameseles.com!**--I'm an NLP-focused data scientist and neural engineer working to explore the world of data. I'm using this blog as a place to try out new ideas and (hopefully) find some interesting applications for data science tools.
+<br />
+Outside of that, I am a potato chip enthusiast and fan of all things to do with the City of Pittsburgh.
+
 <br />
 <br />
 
