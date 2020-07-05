@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "contrast" #"default", "aqua", "contrast", "dark", "d
 
 # Site Settings
 locale                   : "en-US"
-title                    : "jameseles.com""
+title                    : "jameseles.com"
 title_separator          : "|"
 name                     : "James Eles"
 description              : "Data science and neural engineering blog"
