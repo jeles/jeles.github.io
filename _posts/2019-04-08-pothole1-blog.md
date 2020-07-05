@@ -5,7 +5,7 @@ type: post
 comments: true
 date:   2019-04-08
 header:
-  teaser: "assets/images/2019-04-08_f2.png"
+  teaser: "assets/images/2019-04-08-pothole/2019-04-08_f2.png"
 
 excerpt: "Simple visualization of Pittsburgh's potholes from 311 reports"
 ---
@@ -214,7 +214,7 @@ plt.show()
 ```
 
 
-![png]({{ "/assets/images/2019-04-08_f1.png" }})
+![png]({{ "/assets/images/2019-04-08-pothole/2019-04-08_f1.png" }})
 
 <br />
 
@@ -256,7 +256,7 @@ plt.xlabel('Longitude', fontsize=12)
 
 
 
-![png]({{ "/assets/images/2019-04-08_f2.png" }})
+![png]({{ "/assets/images/2019-04-08-pothole/2019-04-08_f2.png" }})
 
 
 ## Look at those beautiful 3 rivers! Like I said, this is just a first stop on this exploration, but take a minute to appreciate how Pittsburgh is both beautiful and a terrifying place to drive.

@@ -19,7 +19,7 @@ excerpt: " <br /> <br /> "
 ---
 <a name="about"></a>
 
-**Welcome to jameseles.com!**--I'm an NLP-focused data scientist and formal neural engineer working on federal contracting problems. This [blog](http://jameseles.com/DataScience/) is a place to explore interesting data science problems out in the world. Enjoy!
+**Welcome to jameseles.com!**--I'm an NLP-focused data scientist and former neural engineer working on federal contracting problems. This [blog](http://jameseles.com/DataScience/) is a place to explore interesting data science problems out in the world. Enjoy!
 <br />
 <br />
 

@@ -78,11 +78,11 @@ plt.show()
 
 
 
-![png]({{ "/assets/images/2019-04-06_f1.png" }})
+![png]({{ "/assets/images/2019-04-06-braincluster/2019-04-06_f1.png" }})
 
 
 
-![png]({{ "/assets/images/2019-04-06_f2.png" }})
+![png]({{ "/assets/images/2019-04-06-braincluster/2019-04-06_f2.png" }})
 
 
 <br />
@@ -119,7 +119,7 @@ plt.show()
 ```
 
 
-![png]({{ "/assets/images/2019-04-06_f3.png" }})
+![png]({{ "/assets/images/2019-04-06-braincluster/2019-04-06_f3.png" }})
 
 <br />
 <br />
@@ -184,7 +184,7 @@ plt.show()
 ```
 
 
-![png]({{ "/assets/images/2019-04-06_f4.png" }})
+![png]({{ "/assets/images/2019-04-06-braincluster/2019-04-06_f4.png" }})
 
 
 <br />
@@ -235,7 +235,7 @@ plt.show()
 ```
 
 
-![png]({{ "/assets/images/2019-04-06_f5.png" }})
+![png]({{ "/assets/images/2019-04-06-braincluster/2019-04-06_f5.png" }})
 
 
 <br />
@@ -311,7 +311,7 @@ plt.show()
 ```
 
 
-![png]({{ "/assets/images/2019-04-06_f6.png" }})
+![png]({{ "/assets/images/2019-04-06-braincluster/2019-04-06_f6.png" }})
 
 
 ## There we have it! It looks like most brain tissue is highly correlated immediately after implantation (the other clusters appear to be defining big blood vessels and the edge of the craniotomy), but by a week after implantation, we see 3 brain regions that is stable through the first month. This likely indicates that there is a healing period after implantation, and it takes some time for things to return to normal.
