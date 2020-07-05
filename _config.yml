@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "contrast" #"default", "aqua", "contrast", "dark", "d
 
 # Site Settings
 locale                   : "en-US"
-title                    : "The Oxbow: Insights beneath the Surface"
+title                    : "jameseles.com""
 title_separator          : "|"
 name                     : "James Eles"
 description              : "Data science and neural engineering blog"
@@ -108,8 +108,8 @@ analytics:
 author:
   name             : "James Eles, PhD"
   avatar           : "/assets/images/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Data enthusiast and neural engineering post-doc at University of Pittsburgh"
-  location         : "Pittsburgh, PA"
+  bio              : "NLP focused Data Scientist working on federal contracts"
+  location         : "Washington, D.C."
   email            :
   links:
     - label: "Email"

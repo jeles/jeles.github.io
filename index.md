@@ -19,13 +19,7 @@ excerpt: " <br /> <br /> "
 ---
 <a name="about"></a>
 
-**Welcome to The Oxbow**--a blog dedicated to data science, coding, and making insights beneath the surface. My name is James Eles. I'm a post-doctoral associate in Bioengineering at the University of Pittsburgh. My research is focused on understanding how medical brain implants like brain-computer interfaces and stimulation electrodes interact with brain tissue, but I am more generally passionate about using data to do good. 
-<br />
-<br />
-
-
-
-Check out the [blog](http://jameseles.com/DataScience/) for the full post archive. Here's my most recent posts:
+**Welcome to jameseles.com!**--I'm an NLP-focused data scientist and formal neural engineer working on federal contracting problems. This [blog](http://jameseles.com/DataScience/) is a place to explore interesting data science problems out in the world. Enjoy!
 <br />
 <br />
 
