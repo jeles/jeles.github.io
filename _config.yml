@@ -108,7 +108,7 @@ analytics:
 author:
   name             : "James Eles, PhD"
   avatar           : "/assets/images/avatar.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "NLP focused Data Scientist working on federal contracts"
+  bio              : "Data scientist and neural engineer"
   location         : "Washington, D.C."
   email            :
   links:
