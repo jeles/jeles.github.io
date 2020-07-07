@@ -39,5 +39,3 @@ I hope that this tool (or something like it) can empower city planners to use pu
 This shows us that faster intersections in areas non-residentially zoned areas (read: likely areas with more traffic) are more dangerous. And it also shows us that intersections that get more complaints (measured by the number of people calling into 311 about the intersection) actually might merit a closer examination by city planners. It's also interesting to note that Warning Signs (like the signs that say "traffic signal ahead") contribute the least to our prediction! This might suggest that these solutions are wasting time and money and, perhaps more dangerously, giving people a false sense of security about an intersection.
 
 Anyways, I hope you enjoy the tool. And please drive safe out there and use your turn signals!!!
-
-{%  include test_html/test_fi.html  %}
