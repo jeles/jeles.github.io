@@ -71,8 +71,8 @@ Next-generation brain-computer interface tools incorporate sensory feedback to i
 
 <p align="center">
     <video muted controls playsinline height="450">
-        <source src="/assets/images/neural-engineering/tpStimM.mp4" type="video/mp4"></source>
         <source src="/assets/images/neural-engineering/tpStimW.webm" type="video/webm"></source>
+        <source src="/assets/images/neural-engineering/tpStimM.mp4" type="video/mp4"></source>
     </video>
 </p>
 
