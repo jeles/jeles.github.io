@@ -15,7 +15,7 @@ The ability to control prosthetics and computers with thought has been a seminal
 An electrode device needs to be CLOSE to a neuron in order to distinguish its individual activity from the billions of other neurons. To achieve this, the device typically shaped like a needle or dagger and is punctured through the brain tissue. As the device enters, it breaks blood vessels, pulls connected neurons appart, and creates mechanical strain on the cells. Part of my research was to map out this damage using transgenic models to visualize neural activity during implantation. Here's what this looks like (the electrode array looks like a black fork):
 
 <p align="center">
-    <video muted controls width="512">
+    <video muted playsinline controls width="512">
         <source src="/assets/images/neural-engineering/mvx_insert.webm" type="video/webm">
     </video>
 </p>
@@ -23,7 +23,7 @@ An electrode device needs to be CLOSE to a neuron in order to distinguish its in
 The bright area is a marker for neural activity. The fact that it gets very bright during the implantation reveals a potential source of over-stimulation and damage to the neurons. A different imaging technique can allows us to visualize individual cells during implantation: 
 
 <p align="center">
-    <video muted controls>
+    <video muted playsinline controls>
         <source src="/assets/images/neural-engineering/twop_insert.webm" type="video/webm">
     </video>
 </p>
@@ -44,7 +44,7 @@ The same imaging techniques described above can also be used to study the inflam
 After an electrode is implanted in the brain the local inflammatory cells of the brain--the microglia--react by extending their arms toward the device. They cover the surface of the device and eventually migrate toward it (evident to the right of the labeled electrodes).
 
 <p align="center">
-    <video muted controls height="450">
+    <video muted controls playsinline height="450">
         <source src="/assets/images/neural-engineering/cx3cr1_3.webm" type="video/webm">
     </video>
 </p>
@@ -58,7 +58,7 @@ Using these imaging techniques, we were able to establish that the microglial re
 The electrode is implanted into the brain, but parts of the electrode stick out of the brain. This region has a distinct inflammatory reaction, but we were able to see that the cells here were able to still crawl on the device and potentially migrate down into the brain.
 
 <p align="center">
-    <video muted controls height="450">
+    <video muted controls playsinline height="450">
         <source src="/assets/images/neural-engineering/newMeninges.webm" type="video/webm">
     </video>
 </p>
@@ -70,8 +70,8 @@ This technique can help to direct electrode design to minimize and control the i
 Next-generation brain-computer interface tools incorporate sensory feedback to improve user-control. For example, for a brain-computer interface controlling a prosthetic arm, sensory feedback can help the patient to "feel" what the arm is touching. This is done by electrically stimulating the sensory neurons associated with the hand. My post-doctoral research used imaging techniques to understand how different patterns of electrical stimulation could cause different types of neural activation. In this video, I show that by simply changing the pattern of electrical pulses--but keeping the same total amoundt of injected change--we can change which neurons are activated. Videos from two stimulation trials are overlaid on one another--oranger cells were more preferentially activated during the "bursty" stimulation, while blue cells were preferentially activated during the "continuous" stimulation:
 
 <p align="center">
-    <video muted controls height="450">
-        <source src="/assets/images/neural-engineering/tp_stim.webm" type="video/webm">
+    <video controls muted playsinline height="450">
+        <source src="/assets/images/neural-engineering/tp_mp4_brighter_20fps.mp4" type="video/mp4"></source>
     </video>
 </p>
 
