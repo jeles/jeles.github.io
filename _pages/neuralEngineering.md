@@ -70,9 +70,9 @@ This technique can help to direct electrode design to minimize and control the i
 Next-generation brain-computer interface tools incorporate sensory feedback to improve user-control. For example, for a brain-computer interface controlling a prosthetic arm, sensory feedback can help the patient to "feel" what the arm is touching. This is done by electrically stimulating the sensory neurons associated with the hand. My post-doctoral research used imaging techniques to understand how different patterns of electrical stimulation could cause different types of neural activation. In this video, I show that by simply changing the pattern of electrical pulses--but keeping the same total amoundt of injected change--we can change which neurons are activated. Videos from two stimulation trials are overlaid on one another--oranger cells were more preferentially activated during the "bursty" stimulation, while blue cells were preferentially activated during the "continuous" stimulation:
 
 <p align="center">
-    <video muted controls playsinline preload="auto" height="450">
-        <source src="/assets/images/neural-engineering/tpStimW.webm" type="video/webm"></source>
-        <source src="/assets/images/neural-engineering/tpStimM.mp4" type="video/mp4"></source>
+    <video muted controls playsinline height="450">
+        <source src="/assets/images/neural-engineering/tpStimW.webm#t=0.001" type="video/webm"></source>
+        <source src="/assets/images/neural-engineering/tpStimM.mp4#t=0.001" type="video/mp4"></source>
     </video>
 </p>
 
