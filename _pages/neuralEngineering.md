@@ -16,7 +16,8 @@ An electrode device needs to be CLOSE to a neuron in order to distinguish its in
 
 <p align="center">
     <video muted playsinline controls width="512">
-        <source src="/assets/images/neural-engineering/mvx_insert.webm" type="video/webm">
+        <source src="/assets/images/neural-engineering/mvxInsertM.mp4#t=0.001" type="video/mp4"></source>
+        <source src="/assets/images/neural-engineering/mvxInsertW.webm#t=0.001" type="video/webm"></source>
     </video>
 </p>
 
@@ -24,7 +25,8 @@ The bright area is a marker for neural activity. The fact that it gets very brig
 
 <p align="center">
     <video muted playsinline controls>
-        <source src="/assets/images/neural-engineering/twop_insert.webm" type="video/webm">
+        <source src="/assets/images/neural-engineering/twopInsertM.mp4#t=0.001" type="video/mp4"></source>
+        <source src="/assets/images/neural-engineering/twopInsertW.webm#t=0.001" type="video/webm"></source>
     </video>
 </p>
 
@@ -45,7 +47,8 @@ After an electrode is implanted in the brain the local inflammatory cells of the
 
 <p align="center">
     <video muted controls playsinline height="450">
-        <source src="/assets/images/neural-engineering/cx3cr1_3.webm" type="video/webm">
+        <source src="/assets/images/neural-engineering/cx3cr1M.mp4#t=0.001" type="video/mp4"></source>
+        <source src="/assets/images/neural-engineering/cx3cr1W.webm#t=0.001" type="video/webm"></source>
     </video>
 </p>
 
@@ -59,7 +62,8 @@ The electrode is implanted into the brain, but parts of the electrode stick out 
 
 <p align="center">
     <video muted controls playsinline height="450">
-        <source src="/assets/images/neural-engineering/newMeninges.webm" type="video/webm">
+        <source src="/assets/images/neural-engineering/meningesM.mp4#t=0.001" type="video/mp4"></source>
+        <source src="/assets/images/neural-engineering/meningesW.webm#t=0.001" type="video/webm"></source>
     </video>
 </p>
 
@@ -67,15 +71,24 @@ This technique can help to direct electrode design to minimize and control the i
 
 ## Improving Brain-Computer Interface feedback through electrical stimulation
 
-Next-generation brain-computer interface tools incorporate sensory feedback to improve user-control. For example, for a brain-computer interface controlling a prosthetic arm, sensory feedback can help the patient to "feel" what the arm is touching. This is done by electrically stimulating the sensory neurons associated with the hand. My post-doctoral research used imaging techniques to understand how different patterns of electrical stimulation could cause different types of neural activation. In this video, I show that by simply changing the pattern of electrical pulses--but keeping the same total amoundt of injected change--we can change which neurons are activated. Videos from two stimulation trials are overlaid on one another--oranger cells were more preferentially activated during the "bursty" stimulation, while blue cells were preferentially activated during the "continuous" stimulation:
+Next-generation brain-computer interface tools incorporate sensory feedback to improve user-control. For example, with a brain-computer interface controlling a prosthetic arm, sensory feedback can help the patient to "feel" what the arm is touching. This is done by electrically stimulating the sensory neurons associated with the hand. My post-doctoral research used imaging techniques to understand how different patterns of electrical stimulation could cause different types of neural activation. By patterns, take the following example:
+
+
+<p align="center">
+    <img src="/assets/images/neural-engineering/tp_patterns.png">
+</p>
+
+Each tick is an electrical waveform that can depolarize a neuron. Both the top and bottom stimulation patterns have the same number of ticks, but the ticks on the top pattern are more "bursty" while the bottom pattern is "continuous".
+
+In the following video, we are watching a "bursty" and a "continuous" stimulation trial overlaid on one another. Oranger cells were preferentially activated during the "bursty" stimulation, while blue cells were preferentially activated during the "continuous" stimulation:
 
 <p align="center">
     <video muted controls playsinline height="450">
-        <source src="/assets/images/neural-engineering/tpStimW.webm#t=0.001" type="video/webm"></source>
         <source src="/assets/images/neural-engineering/tpStimM.mp4#t=0.001" type="video/mp4"></source>
+        <source src="/assets/images/neural-engineering/tpStimW.webm#t=0.001" type="video/webm"></source>
     </video>
 </p>
 
-We hypothesized that using "bursts" of electrical pulses can be used to control the balance of excitation and inhibition and can be exploited to "shape" a neural response to meet the clinical need. 
+This shows that the same amount of charge delivered from the same exact electrode site can be shaped to recruit a different set of neurons. Clinically, this may mean that the same stimulating electrode can generate different sensations simply by altering the temporal pattern. We hypothesized that this effect was mediated by playing on the different firing rates of excitatory and inhibitory neurons.
 
 This is the short version of my research. For my publication, see my [Google Scholar page](https://scholar.google.com/citations?user=W2blKL8AAAAJ&hl=en). Please feel free to reach out if you'd like PDFs for any of these papers. 
