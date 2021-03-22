@@ -26,6 +26,14 @@ Detroit-style crust with meatballs, onion straws, ricotta, and sautéed green pe
 Detroit-style crust with pepperoni, caramelized onions, ricotta, and corn
 
 ---
+
+<p align="center">
+    <img src="/assets/images/pizza-hof/sausage_white_detroit.jpg">
+</p>
+
+White Pizza!!! Detroit crust with white sauce, banana peppers, and sausage
+
+---
 <p align="center">
     <img src="/assets/images/pizza-hof/pep_carmel_round.JPG">
 </p>
