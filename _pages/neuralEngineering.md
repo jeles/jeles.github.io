@@ -8,7 +8,7 @@ comments: true
 share: true
 ---
 
-The ability to control prosthetics and computers with thought has been a seminal breakthrough in neuroscience and biomedical engineering. The most impressive technology is based on invasive medical devices--multi-electrode arrays--which are surgically placed in the brain. As a graduate student and post-doc at University of Pittsburgh, my research was to develop imaging and image processing techniques to understand how the the implantation of these devices affected the health of the surrounding brain tissue. The following are some highlights from that work.
+The ability to control prosthetics and computers with thought has been a seminal breakthrough in neuroscience and biomedical engineering. The most impressive technology is based on invasive medical devices--multi-electrode arrays--which are surgically placed in the brain. As a graduate student in Tracy Cui's [lab](https://www.engineering.pitt.edu/NTE_Lab/) and post-doc in TK Kozai's [lab](https://www.bioniclab.org/) at University of Pittsburgh, my research was to develop imaging and image processing techniques to understand how the the implantation of these devices affected the health of the surrounding brain tissue. The following are some highlights from that work.
 
 ## Mapping neuronal damage during electrode implantation
 
