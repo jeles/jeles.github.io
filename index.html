@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>~ waves ~</title>
+  <meta name="description" content="Noise-driven wave art" />
+  <style>
+    :root{
+      --bg0:#0b1020; --bg1:#111a33; --bg2:#0a1a2f;
+      --ink:#cfe8ff; --muted:#7aa3c7; --accent:#7fd0ff;
+    }
+    html,body{height:100%;margin:0}
+    body{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      background:
+        radial-gradient(1200px 800px at 80% 20%, #0f2b47 0%, transparent 60%),
+        radial-gradient(900px 600px at 10% 80%, #0a1930 0%, transparent 55%),
+        linear-gradient(180deg, var(--bg0), var(--bg1) 40%, var(--bg2) 100%);
+      color: var(--ink);
+      overflow: hidden;
+    }
+    /* Canvas wrapper so we can add a subtle vignette and grain */
+    .stage{
+      position:fixed; inset:0;
+      filter: saturate(1.15) contrast(1.05);
+    }
+    canvas{ display:block; width:100%; height:100%; }
+
+    /* Vignette + grain overlay (pure CSS) */
+    .fx::after{
+      content:""; position:fixed; inset:0; pointer-events:none;
+      background:
+        radial-gradient(120% 120% at 50% 50%, transparent 60%, rgba(0,0,0,.25) 100%),
+        repeating-linear-gradient(0deg, rgba(255,255,255,.02) 0 2px, transparent 2px 4px);
+      mix-blend-mode: overlay;
+    }
+
+    /* Minimal UI */
+    .hud{
+      position: fixed; left: 1rem; bottom: 1rem;
+      background: rgba(12,18,36,.5);
+      border: 1px solid rgba(127,208,255,.2);
+      backdrop-filter: blur(6px);
+      padding: .75rem 1rem;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      display:flex; gap:.75rem; align-items:center;
+      user-select:none;
+    }
+    .hud label{ font-size:.85rem; color:var(--muted)}
+    .hud input[type="range"]{ width:160px }
+    .hud button{
+      background: linear-gradient(180deg, rgba(127,208,255,.2), rgba(127,208,255,.08));
+      border:1px solid rgba(127,208,255,.35);
+      color: var(--accent);
+      padding:.4rem .65rem; border-radius:10px; cursor:pointer;
+      font-size:.85rem;
+    }
+    .hud button:active{ transform: translateY(1px) }
+    .badge{
+      position: fixed; right: 1rem; top: 1rem;
+      color: var(--muted); font-size:.85rem; letter-spacing:.06em;
+      background: rgba(12,18,36,.5); border:1px solid rgba(127,208,255,.2);
+      padding:.35rem .6rem; border-radius:10px;
+    }
+
+    /* “Deprecated site” ribbon (optional) */
+    .ribbon{
+      position:fixed; right:-60px; top:18px; rotate: 35deg;
+      background: rgba(255,110,110,.12); color:#ffb3b3;
+      border:1px solid rgba(255,110,110,.35);
+      padding:.35rem 2.2rem; font-size:.8rem; letter-spacing:.08em;
+      text-transform:uppercase; border-radius:10px;
+    }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .hud, .badge, .ribbon { display:none }
+      body { overflow:auto }
+    }
+  </style>
+</head>
+<body>
+  <div class="stage fx">
+    <canvas id="waves" aria-label="Animated noise waves"></canvas>
+  </div>
+
+  <div class="badge">noise-wave study</div>
+  <div class="ribbon">deprecated</div>
+
+  <div class="hud" role="group" aria-label="Wave controls">
+    <label for="speed">speed</label>
+    <input id="speed" type="range" min="0" max="2" step="0.01" value="0.7" />
+    <label for="ampl">ampl</label>
+    <input id="ampl" type="range" min="10" max="200" step="1" value="80" />
+    <button id="toggle">wireframe</button>
+  </div>
+
+  <script>
+  // ---- Simplex noise (lightweight 2D) ----
+  // Adapted from public-domain code by Ian McEwan/Stefan Gustavson.
+  (function(){
+    function Simplex(seed=1337){
+      // compact seeded PRNG (Mulberry32)
+      let t = seed >>> 0;
+      const rnd = () => (t += 0x6D2B79F5, Math.imul(t ^ t >>> 15, 1 | t) >>> 0) / 4294967296;
+      const grad3 = new Float32Array([1,1,0, -1,1,0, 1,-1,0, -1,-1,0, 1,0,1, -1,0,1, 1,0,-1, -1,0,-1, 0,1,1, 0,-1,1, 0,1,-1, 0,-1,-1]);
+      const p = new Uint8Array(256); for(let i=0;i<256;i++) p[i]=i;
+      for(let i=255;i>0;i--){ const j=(rnd()* (i+1))|0; const x=p[i]; p[i]=p[j]; p[j]=x; }
+      const perm = new Uint8Array(512), permMod12 = new Uint8Array(512);
+      for (let i=0;i<512;i++){ perm[i]=p[i&255]; permMod12[i]=perm[i]%12; }
+      const F2=0.5*(Math.sqrt(3)-1), G2=(3-Math.sqrt(3))/6;
+      this.noise2D = function(xin, yin){
+        let n0=0,n1=0,n2=0;
+        const s=(xin+yin)*F2;
+        const i=Math.floor(xin+s), j=Math.floor(yin+s);
+        const t=(i+j)*G2;
+        const X0=i-t, Y0=j-t;
+        const x0=xin-X0, y0=yin-Y0;
+        let i1, j1; if(x0>y0){ i1=1; j1=0; } else { i1=0; j1=1; }
+        const x1=x0-i1+G2, y1=y0-j1+G2;
+        const x2=x0-1+2*G2, y2=y0-1+2*G2;
+        const ii=i&255, jj=j&255;
+        const gi0=permMod12[ii+perm[jj]]*3, gi1=permMod12[ii+i1+perm[jj+j1]]*3, gi2=permMod12[ii+1+perm[jj+1]]*3;
+        let t0=0.5 - x0*x0 - y0*y0; if(t0>=0){ t0*=t0; n0=t0*t0*(grad3[gi0]*x0 + grad3[gi0+1]*y0); }
+        let t1=0.5 - x1*x1 - y1*y1; if(t1>=0){ t1*=t1; n1=t1*t1*(grad3[gi1]*x1 + grad3[gi1+1]*y1); }
+        let t2=0.5 - x2*x2 - y2*y2; if(t2>=0){ t2*=t2; n2=t2*t2*(grad3[gi2]*x2 + grad3[gi2+1]*y2); }
+        return 70*(n0+n1+n2);
+      }
+    }
+
+    // ---- Wave renderer ----
+    const canvas = document.getElementById('waves');
+    const ctx = canvas.getContext('2d');
+    const noise = new Simplex(Math.floor(Math.random()*1e9));
+    const params = {
+      speed: 0.7,     // ui-controlled (0..2)
+      amplitude: 80,  // ui-controlled (10..200)
+      layers: 6,      // number of stacked waves
+      freq: 0.0016,   // base frequency
+      lacunarity: 2.0, // freq multiplier per octave
+      gain: 0.55,     // amplitude falloff per octave
+      octaves: 3,     // noise octaves
+      wireframe: false
+    };
+
+    // UI wiring
+    const $speed = document.getElementById('speed');
+    const $ampl = document.getElementById('ampl');
+    const $toggle = document.getElementById('toggle');
+    $speed.addEventListener('input', e => params.speed = parseFloat(e.target.value));
+    $ampl.addEventListener('input', e => params.amplitude = parseFloat(e.target.value));
+    $toggle.addEventListener('click', () => {
+      params.wireframe = !params.wireframe;
+      $toggle.textContent = params.wireframe ? 'fill' : 'wireframe';
+    });
+
+    // HiDPI sizing
+    const resize = () => {
+      const dpr = Math.max(1, Math.min(2.5, window.devicePixelRatio || 1));
+      canvas.width  = Math.floor(innerWidth * dpr);
+      canvas.height = Math.floor(innerHeight * dpr);
+      canvas.style.width  = innerWidth + 'px';
+      canvas.style.height = innerHeight + 'px';
+      ctx.setTransform(dpr,0,0,dpr,0,0); // draw in CSS pixels
+    };
+    addEventListener('resize', resize, {passive:true});
+    resize();
+
+    // Smooth palette between two colors (for fills)
+    const lerp = (a,b,t)=>a+(b-a)*t;
+    function hexToRgb(h){
+      const m = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(h);
+      return m ? [parseInt(m[1],16), parseInt(m[2],16), parseInt(m[3],16)] : [0,0,0];
+    }
+    const c1 = hexToRgb('#6ad7ff'), c2 = hexToRgb('#92b6ff');
+
+    // Fractal noise helper
+    function fBm(x, y, oct, freq, gain, lac){
+      let amp=1, f=freq, sum=0, norm=0;
+      for(let i=0;i<oct;i++){
+        sum += amp * noise.noise2D(x*f, y*f);
+        norm += amp;
+        amp *= gain; f *= lac;
+      }
+      return sum / norm;
+    }
+
+    let t = 0;
+    function tick() {
+      t += 0.016 * params.speed;
+      const w = innerWidth, h = innerHeight;
+
+      // background glow refresh
+      ctx.clearRect(0,0,w,h);
+
+      const baseY = h*0.58;
+      const layerGap = Math.max(14, h*0.04);
+
+      for (let L=0; L<params.layers; L++){
+        const yOffset = baseY + L*layerGap;
+        const alpha = 0.75 - L*(0.75/params.layers);
+        const amp = params.amplitude * (1 - L/(params.layers+2));
+        const freq = params.freq * (1 + L*0.12);
+
+        ctx.beginPath();
+        ctx.moveTo(0, h);
+        ctx.lineTo(0, yOffset);
+
+        const step = Math.max(1, Math.floor(w/320)); // adaptive resolution
+        for (let x=0; x<=w; x+=step){
+          const n = fBm(x + 1000, t*120 + L*300, params.octaves, freq, params.gain, params.lacunarity);
+          const y = yOffset + n * amp;
+          ctx.lineTo(x, y);
+        }
+        ctx.lineTo(w, h);
+        ctx.closePath();
+
+        if (params.wireframe){
+          ctx.strokeStyle = `rgba(207,232,255,${Math.max(.12, alpha*0.6)})`;
+          ctx.lineWidth = 1.25;
+          ctx.stroke();
+        } else {
+          const k = L/(params.layers-1 || 1);
+          const r = Math.round(lerp(c1[0], c2[0], k));
+          const g = Math.round(lerp(c1[1], c2[1], k));
+          const b = Math.round(lerp(c1[2], c2[2], k));
+          ctx.fillStyle = `rgba(${r},${g},${b},${alpha})`;
+          ctx.fill();
+        }
+      }
+      requestAnimationFrame(tick);
+    }
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      requestAnimationFrame(tick);
+    } else {
+      // Static snapshot if reduced motion is preferred
+      const w = innerWidth, h = innerHeight;
+      ctx.fillStyle = 'rgba(146,182,255,0.5)';
+      ctx.fillRect(0, h*0.6, w, h*0.4);
+    }
+  })();
+  </script>
+</body>
+</html>
